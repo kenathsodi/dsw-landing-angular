@@ -1,0 +1,24 @@
+<header class="container py-5 text-center">
+  <h1 class="display-5 fw-bold">Desarrollo de Sitios Web</h1>
+  <p class="lead">
+    Aprende a construir sitios y aplicaciones web modernos con Angular 20, TypeScript y Bootstrap 5.
+    Esta landing page es la base del curso: componentes standalone, rutas definidas en
+    <code>app.routes.ts</code> y una interfaz responsiva lista para seguir creciendo.
+  </p>
+</header>
+
+<section class="container pb-5">
+  <div class="row g-4">
+    @for (tec of tecnologias; track tec.nombre) {
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center shadow-sm">
+          <div class="card-body">
+            <i class="bi {{ tec.icono }} fs-1"></i>
+            <h2 class="h5 mt-3">{{ tec.nombre }}</h2>
+            <p class="mb-0">{{ tec.descripcion }}</p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

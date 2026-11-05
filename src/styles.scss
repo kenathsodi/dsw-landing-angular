@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+// Tema de Angular Material (Material 3) generado con ng add.
+// La tipografía de Material usa la misma fuente global del proyecto (FuenteDSW).
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+    ),
+    typography: (
+      plain-family: 'FuenteDSW',
+      brand-family: 'FuenteDSW',
+    ),
+    density: 0,
+  ));
+}
+
+body {
+  color-scheme: light;
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  margin: 0;
+}
+
+html, body { height: 100%; }
+
+// ---------------------------------------------------------------
+// Fuente global (Paso 4): archivos locales en src/assets/fonts.
+// La familia Lato es la que declara el ZIP en _variables.scss.
+// ---------------------------------------------------------------
+@font-face {
+  font-family: 'FuenteDSW';
+  src: url('/assets/fonts/Lato-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FuenteDSW';
+  src: url('/assets/fonts/Lato-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FuenteDSW';
+  src: url('/assets/fonts/Lato-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FuenteDSW';
+  src: url('/assets/fonts/Lato-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bs-body-font-family: 'FuenteDSW', sans-serif;
+}
+
+body {
+  font-family: 'FuenteDSW', sans-serif;
+}
